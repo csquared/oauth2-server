@@ -40,3 +40,5 @@ task :connect => :env do
   token = client.auth_code.get_token(code, :redirect_uri => 'http://localhost:8080/oauth/callback')
   puts "Auth Token: #{token.token}"
 end
+
+task :do_it_live => :connect
