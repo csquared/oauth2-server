@@ -37,9 +37,12 @@ production system.
 
 ### Install Dependencies
 
+    gem install foreman
     gem install bundler
     bundle install
-    gem install foreman
+
+### Start it
+
     formean start
 
 #### Register a Client
