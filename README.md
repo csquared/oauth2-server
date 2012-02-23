@@ -1,4 +1,4 @@
-# Oauth2::Server
+# OAuth2::Server
 
 This gem is an implementation of an OAuth2 Authoriation Server.
 
