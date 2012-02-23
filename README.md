@@ -53,7 +53,11 @@ production system.
 
 #### Get a Token
 
-    bundle exec rake do_it_live 
+    $ bundle exec rake do_it_live 
+
+    Auth Url: http://localhost:5000/authorize?response_type=code&client_id=client_id&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Foauth%2Fcallback
+    Auth Code: 5106a892-3b43-48f2-8841-ae0198ec00db
+    Auth Token: 6c7c0af3-9158-45bb-b61c-457da066cd08
 
 ## Testing
 
