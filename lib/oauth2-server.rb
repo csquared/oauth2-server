@@ -4,7 +4,6 @@ require 'uuidtools'
 require 'pg'
 require 'sequel'
 
-require "oauth2-server/version"
 require "oauth2-server/authorization_server"
 
 if ENV['OAUTH2_DB_URL']
@@ -13,6 +12,4 @@ if ENV['OAUTH2_DB_URL']
   require "oauth2-server/authorization"
 end
 
-module OAuth2
-  Server = AuthorizationServer
-end
+require "oauth2-server/version"

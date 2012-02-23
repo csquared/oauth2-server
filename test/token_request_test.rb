@@ -40,6 +40,7 @@ class TokenRequestTest < RackTestCase
     assert_equal 'example', json_body['token_type']
     assert_equal 3600, json_body['expires_in']
     assert json_body['refresh_token']
+    assert last_response.headers['Content-Type'].include? 'application/json' 
   end
 end
 

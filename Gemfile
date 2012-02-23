@@ -10,4 +10,6 @@ group 'test' do
   gem 'webmock', :require => 'webmock/test_unit'
   gem 'rack-test', :require => 'rack/test'
   gem 'rr'
+  gem 'oauth2'
+  gem 'rest-client'
 end

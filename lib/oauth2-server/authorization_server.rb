@@ -38,15 +38,18 @@ module OAuth2
       @auth = Rack::Auth::Basic::Request.new(request.env)
       if @auth.provided? && @auth.basic? && @auth.credentials && 
         @auth.credentials == [auth.client_id, client.client_secret]
-
-        {access_token: UUIDTools::UUID.random_create.to_s, 
-         token_type: 'example',
-         expires_in: 3600,
-         refresh_token: UUIDTools::UUID.random_create.to_s, 
-        }.to_json
+      elsif params[:client_id] && params[:client_secret]
       else
         halt 401
       end
+
+       content_type 'application/json' 
+       {
+         access_token: UUIDTools::UUID.random_create.to_s, 
+         token_type: 'example',
+         expires_in: 3600,
+         refresh_token: UUIDTools::UUID.random_create.to_s, 
+       }.to_json
     end
     
     def redirect_uri(opts = {})
