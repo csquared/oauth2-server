@@ -21,6 +21,54 @@ Or install it yourself as:
 
 ## Usage
 
+### Standalone Server
+
+You can just run this server against a local database to experiment with your oauth endpoint
+before integrating into your app, or just to be used as a standalone auth server against a 
+production system.
+
+#### Setup datbaase
+
+    createdb oauth-server-test
+
+#### Add DB URL to .env
+
+    echo 'OAUTH2_DB_URL=postgres://localhost/oauth-server' > .env
+
+### Install Dependencies
+
+    gem install bundler
+    bundle install
+    gem install foreman
+    formean start
+
+#### Register a Client
+
+    export OAUTH2_DB_URL=postgres://localhost/oauth-server
+    bundle exec rake boostrap
+
+
+#### Get a Token
+
+    bundle exec rake do_it_live 
+
+## Testing
+
+### Setup Test DB
+
+    createdb oauth-server-test
+
+### Install Dependencies
+
+    gem install bundler
+    bundle install
+
+### Run 'em
+
+    bundle exec rake
+
+
+
 
 ## Contributing
 
