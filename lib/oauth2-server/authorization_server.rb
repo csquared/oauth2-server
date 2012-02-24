@@ -47,7 +47,8 @@ module OAuth2
        token = Token.create token_type: 'example',
          access_token: UUIDTools::UUID.random_create.to_s, 
          expires_in: 3600,
-         refresh_token: UUIDTools::UUID.random_create.to_s
+         refresh_token: UUIDTools::UUID.random_create.to_s,
+         authorization_id: auth.id
        
        token.to_json
     end

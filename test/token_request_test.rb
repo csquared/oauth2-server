@@ -38,6 +38,7 @@ class TokenRequestTest < RackTestCase
     token = Token.first
     assert_equal 3600, token.expires_in
     assert_equal 'example', token.token_type
+    assert_equal Authorization.first.id, token.authorization_id
     assert token.access_token
     assert token.refresh_token
   end
