@@ -39,6 +39,7 @@ task :connect => :env do
   puts "Auth Code: #{code}"
   token = client.auth_code.get_token(code, :redirect_uri => 'http://localhost:8080/oauth/callback')
   puts "Auth Token: #{token.token}"
+  puts "Refresh Token: #{token.refresh_token}"
 end
 
 task :do_it_live => :connect
