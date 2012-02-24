@@ -8,7 +8,7 @@ class RackTestCase < Test::Unit::TestCase
 
   def teardown
     WebMock.reset!
-    [:registered_clients].each{|x| Sequel::Model.db.from(x).truncate}
+    [:registered_clients, :tokens, :authorizations].each{|x| Sequel::Model.db.from(x).truncate}
   end
   
 =begin
