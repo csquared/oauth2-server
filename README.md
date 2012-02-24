@@ -1,6 +1,6 @@
 # OAuth2::Server
 
-This gem is an implementation of an OAuth2 Authoriation Server.
+This gem is an implementation of an OAuth2 Authorization Server.
 
 It is designed to work as a standalone server, as a mountable Rack
 Endpoint in a rails app, or as a middleware by leveraging Sinatra.
