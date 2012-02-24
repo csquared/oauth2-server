@@ -27,9 +27,9 @@ You can just run this server against a local database to experiment with your oa
 before integrating into your app, or just to be used as a standalone auth server against a 
 production system.
 
-#### Setup datbaase
+#### Setup datbaase (postgresql)
 
-    createdb oauth-server-test
+    createdb oauth-server
 
 #### Add DB URL to .env
 
@@ -73,7 +73,6 @@ production system.
 ### Run 'em
 
     bundle exec rake
-
 
 
 
