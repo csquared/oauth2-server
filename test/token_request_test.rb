@@ -30,6 +30,18 @@ class TokenRequestTest < RackTestCase
     assert_equal 400, last_response.status
   end
 
+  def test_stores_granted_acesss_tokens
+    authorize 'foo', '3456'
+    post '/token?code=1234&grant_type=authorization_code'
+
+    assert_equal 1, Token.count
+    token = Token.first
+    assert_equal 3600, token.expires_in
+    assert_equal 'example', token.token_type
+    assert token.access_token
+    assert token.refresh_token
+  end
+
   def test_implements_oauth_response
     authorize 'foo', '3456'
     post '/token?code=1234&grant_type=authorization_code'

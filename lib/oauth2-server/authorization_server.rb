@@ -44,12 +44,12 @@ module OAuth2
       end
 
        content_type 'application/json' 
-       {
+       token = Token.create token_type: 'example',
          access_token: UUIDTools::UUID.random_create.to_s, 
-         token_type: 'example',
          expires_in: 3600,
-         refresh_token: UUIDTools::UUID.random_create.to_s, 
-       }.to_json
+         refresh_token: UUIDTools::UUID.random_create.to_s
+       
+       token.to_json
     end
     
     def redirect_uri(opts = {})
