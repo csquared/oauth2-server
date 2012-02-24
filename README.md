@@ -31,6 +31,10 @@ production system.
 
     createdb oauth-server
 
+#### Run Migrations
+
+    bundle exec sequel -m db/migrations postgres://localhost/oauth-server
+
 #### Add DB URL to .env
 
     echo 'OAUTH2_DB_URL=postgres://localhost/oauth-server' > .env
