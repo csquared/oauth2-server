@@ -1,9 +1,5 @@
 Sequel.migration do
   up do
-    alter_table :authorizations do
-      add_primary_key :id
-    end
-
     create_table :tokens do
       primary_key :id
       String   :access_token
@@ -18,8 +14,6 @@ Sequel.migration do
   end
 
   down do
-    remove_column :authorizations, :id
-
     drop_table :tokens
   end
 end

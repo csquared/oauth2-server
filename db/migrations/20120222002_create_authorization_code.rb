@@ -1,9 +1,10 @@
 Sequel.migration do
   up do
     create_table :authorizations do
-      String :code
-      String :redirect_uri
-      String :client_id
+      primary_key :Id
+      String   :code
+      String   :redirect_uri
+      String   :client_id
 
       DateTime :created_at
       DateTime :updated_at

@@ -1,6 +1,7 @@
 Sequel.migration do
   up do
     create_table :registered_clients do
+      primary_key :id
       String   :client_id
       String   :redirect_uri
       String   :client_secret
