@@ -69,6 +69,10 @@ production system.
 
     createdb oauth-server-test
 
+#### Run Migrations
+
+    bundle exec sequel -m db/migrations postgres://localhost/oauth-server-test
+
 ### Install Dependencies
 
     gem install bundler
