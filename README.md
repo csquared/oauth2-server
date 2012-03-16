@@ -52,7 +52,7 @@ production system.
 #### Register a Client
 
     export OAUTH2_DB_URL=postgres://localhost/oauth-server
-    bundle exec rake boostrap
+    bundle exec rake bootstrap
 
 
 #### Get a Token
