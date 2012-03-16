@@ -47,7 +47,7 @@ production system.
 
 ### Start it
 
-    formean start
+    foreman start
 
 #### Register a Client
 
