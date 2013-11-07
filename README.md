@@ -47,12 +47,12 @@ production system.
 
 ### Start it
 
-    formean start
+    foreman start
 
 #### Register a Client
 
     export OAUTH2_DB_URL=postgres://localhost/oauth-server
-    bundle exec rake boostrap
+    bundle exec rake bootstrap
 
 
 #### Get a Token
@@ -68,6 +68,10 @@ production system.
 ### Setup Test DB
 
     createdb oauth-server-test
+
+#### Run Migrations
+
+    bundle exec sequel -m db/migrations postgres://localhost/oauth-server-test
 
 ### Install Dependencies
 

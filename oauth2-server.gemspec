@@ -15,6 +15,8 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = OAuth2::Server::VERSION
 
+  gem.add_development_dependency 'foreman'
+
   gem.add_dependency 'sinatra'
   gem.add_dependency 'json'
   gem.add_dependency 'uuidtools'
